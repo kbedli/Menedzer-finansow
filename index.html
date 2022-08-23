@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/8d88c95133.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <h1><i class="fas fa-wallet"></i>Wallet</h1>
+      <p>Twój osobisty menedżer finansów.</p>
+      <p class="available-money-text">
+        Bilans wynosi <span class="available-money">0</span> PLN
+      </p>
+      <p class="error-info"></p>
+    </header>
+
+    <main>
+      <div class="all">
+        <div class="incomes-and-expenses">
+          <div class="income-all">
+            <div>
+              <h3 class="income-title">Przychody</h3>
+              <div class="income-area"></div>
+            </div>
+
+            <div class="summary">
+              <h3>Suma przychodów <span class="income-summary">0</span> PLN</h3>
+            </div>
+          </div>
+
+          <div class="expense-all">
+            <div>
+              <h3 class="expense-title">Wydatki</h3>
+              <div class="expenses-area"></div>
+            </div>
+
+            <div class="summary">
+              <h3>Suma wydatków <span class="expense-summary">0</span> PLN</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu">
+          <label for="describtion">Nazwa transakcji</label>
+          <input class="transaction-describtion" type="text" id="describtion" />
+          <label for="amount">Kwota</label>
+          <input class="transaction-amount" type="number" id="amount" />
+
+          <label for="category">Wybierz kategorię</label>
+          <select id="category">
+            <option value="incomes">[ + ] Przychód</option>
+            <option value="expenses">[ - ] Wydatek</option>
+          </select>
+
+          <button class="add-btn">
+            Dodaj <br />
+            transakcję
+          </button>
+        </div>
+      </div>
+
+      <div class="popup">
+        <div><h3>Edytuj transakcję</h3></div>
+        <div>
+          <p class="popup-info"></p>
+          <label for="describtion">Nazwa transakcji</label>
+          <input type="text" class="popup-input-text" id="describtion" />
+          <label for="amount">Kwota</label>
+          <input type="number" class="popup-input-amount" id="amount" />
+        </div>
+        <div class="btns">
+          <button class="popup-btn accept">Zatwierdź</button>
+          <button class="popup-btn cancel">Anuluj</button>
+        </div>
+      </div>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
